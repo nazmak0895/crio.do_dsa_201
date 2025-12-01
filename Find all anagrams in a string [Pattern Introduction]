@@ -11,6 +11,18 @@ function compareMaps(map1, map2) {
     return true;
 }
 
+    // a-z = 26
+    // A-Z = 26
+    // 0-9 = 10
+    // total = 62
+    // O(62) = O(1) constant ---> will be the TC
+
+
+//sliding window concept
+//fixed size window
+//map comaprison logic
+
+
 function findAllAnagramsInAString(s, p) {
     let patMap = new Map();//patter window
     for (let i = 0; i < p.length; i++){
@@ -33,8 +45,10 @@ function findAllAnagramsInAString(s, p) {
         }
         j++;
     }
-    return ans;
+    return ans; //O(n)
 }
+
+//   TC = SC = O(n)
 
 
 
@@ -45,3 +59,4 @@ let result = findAllAnagramsInAString(s, p);
 
 
 console.log(result.length);
+
