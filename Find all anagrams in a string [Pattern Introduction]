@@ -60,3 +60,21 @@ let result = findAllAnagramsInAString(s, p);
 
 console.log(result.length);
 
+TC:
+You build a frequency map (patMap) → O(p.length)
+while(j < s.length) loop → essentially O(s.length)
+Map operations (set, get, delete) happen in O(1) average.
+map comparison is O(1) (constant bounded by 62)
+Sliding window + constant map comparison
+Total Time=O(p)+O(s)=O(n) -> O(n) — Linear time
+
+
+SC:
+
+patMap stores freq of characters in p
+winMap stores freq of characters in current window (size = p.length)
+Maximum number of unique characters is bounded (≤ 62) ⇒ O(1) space
+Array ans stores indices of valid anagram windows
+Worst case: every window is valid → O(n)
+Output list storing valid indices
+O(1)+O(1)+O(n)=O(n)
